@@ -43,8 +43,6 @@ async function getRepoBranches(repoName) {
     console.error(error.message);
     throw error;
   }
-
-  return data;
 }
 
 async function createBranchName(type, repoName) {
