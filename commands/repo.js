@@ -24,7 +24,6 @@ export async function generateBranchName() {
 }
 
 async function getRepoBranches(repoName) {
-  console.log("Getting repository...");
   try {
     const octokit = new Octokit({
       auth: process.env.GITHUB_TOKEN,
@@ -40,7 +39,7 @@ async function getRepoBranches(repoName) {
     }
     return data;
   } catch (error) {
-    console.error(error.message);
+    console.error("Repository not found".error.message);
     throw error;
   }
 }

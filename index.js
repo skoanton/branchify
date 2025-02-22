@@ -1,7 +1,5 @@
 import { Command } from "commander";
 import readline from "readline";
-
-import slugify from "slugify";
 const program = new Command();
 import { generateBranchName } from "./commands/repo.js";
 
